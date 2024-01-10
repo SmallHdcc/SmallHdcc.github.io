@@ -1,1 +1,26 @@
-{}
+{
+  "attachmentFolderPath": "RESOURCE/IMAGE",
+  "promptDelete": false,
+  "trashOption": "none",
+  "spellcheck": true,
+  "autoConvertHtml": false,
+  "readableLineLength": true,
+  "showLineNumber": true,
+  "useTab": false,
+  "alwaysUpdateLinks": true,
+  "showFrontmatter": false,
+  "showUnsupportedFiles": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": true,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showInlineTitle": true,
+  "userIgnoreFilters": [
+    "RESOURCE/"
+  ],
+  "newLinkFormat": "shortest",
+  "focusNewTab": false
+}

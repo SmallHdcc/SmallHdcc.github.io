@@ -1,20 +1,21 @@
 {
   "main": {
-    "id": "b142a14a1f7902da",
+    "id": "f8feb8cfa0a3f084",
     "type": "split",
     "children": [
       {
-        "id": "172ece686aead949",
+        "id": "7c93d12dbb03377f",
         "type": "tabs",
         "children": [
           {
-            "id": "982a07fee7897e7c",
+            "id": "2042b2e718c9ce79",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/第一次尝试.md",
+                "file": "source/_posts/hello-world.md",
                 "mode": "source",
+                "backlinks": false,
                 "source": false
               }
             }
@@ -25,15 +26,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "a3c11c1328592104",
+    "id": "45fb56a26968c3c0",
     "type": "split",
     "children": [
       {
-        "id": "74ae90158a40fbfe",
+        "id": "8b0d9ee0b6e439d1",
         "type": "tabs",
         "children": [
           {
-            "id": "fa8c8ed4a31ca537",
+            "id": "fae070da3a72503b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +44,7 @@
             }
           },
           {
-            "id": "0ff4603234ab0b5e",
+            "id": "512d98569276f13e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +59,15 @@
             }
           },
           {
-            "id": "dac088d1da3adcc6",
+            "id": "a902f9f7d24c235d",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "4e1608b714d34078",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,47 +78,30 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 261.50418853759766
   },
   "right": {
-    "id": "cae4e10dc75bf8ef",
+    "id": "9f3952e3b96f4209",
     "type": "split",
     "children": [
       {
-        "id": "1d953d89e9d2ff7f",
+        "id": "47f8476ee07eccd6",
         "type": "tabs",
         "children": [
           {
-            "id": "0b9f1d2044da83e3",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "source/_posts/第一次尝试.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "3daec9e22ef868bf",
+            "id": "0ee1e1233a5d38c2",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/第一次尝试.md",
+                "file": "source/_posts/hello-world.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "0e3600c815d775e4",
+            "id": "c6607b724f6a1fd7",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,39 +112,108 @@
             }
           },
           {
-            "id": "abd19cbc15661eda",
+            "id": "1be30171e03a7898",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/第一次尝试.md"
+                "file": "source/_posts/hello-world.md"
+              }
+            }
+          },
+          {
+            "id": "24d1b03502811803",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "source/_posts/hello-world.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 299.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:打开快速切换": false,
+      "workspaces:管理工作区布局": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "templater-obsidian:Templater": false,
+      "webpage-html-export:Export Vault to HTML": false,
+      "obsidian-custom-frames:Open bilibill": false,
+      "obsidian-custom-frames:Open video": false,
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "982a07fee7897e7c",
+  "active": "2042b2e718c9ce79",
   "lastOpenFiles": [
-    "source/avatar/SmallHdcc.png",
-    "source/avatar",
-    "README.md",
-    "SmallHdcc.github.io/README.md",
-    "SmallHdcc.github.io",
-    "hotpot.toml"
+    "source/_posts/Websocket.md",
+    "source/_posts/第一次尝试.md",
+    "blog/node_modules/domexception/lib/VoidFunction.js",
+    "blog/node_modules/domexception/lib/utils.js",
+    "blog/node_modules/domexception/lib/legacy-error-codes.json",
+    "blog/node_modules/domexception/lib/Function.js",
+    "blog/node_modules/domexception/lib/DOMException.js",
+    "blog/node_modules/domexception/lib/DOMException-impl.js",
+    "blog/node_modules/domexception/webidl2js-wrapper.js",
+    "blog/node_modules/domexception/README.md",
+    "blog/node_modules/domexception/package.json",
+    "blog/node_modules/domexception/LICENSE.txt",
+    "blog/node_modules/domexception/lib",
+    "blog/node_modules/filelist/node_modules/minimatch/README.md",
+    "blog/node_modules/filelist/README.md",
+    "blog/node_modules/esutils/README.md",
+    "blog/node_modules/whatwg-encoding/README.md",
+    "blog/node_modules/whatwg-mimetype/README.md",
+    "blog/node_modules/whatwg-url/README.md",
+    "blog/node_modules/xmlchars/README.md",
+    "blog/node_modules/xml-name-validator/README.md",
+    "blog/source/about/index-1.md",
+    "blog/node_modules/fsevents/README.md",
+    "blog/source/about/index.md",
+    "blog/node_modules/hexo-theme-vivia/source/css/fonts/fontawesome-webfont.svg",
+    "blog/node_modules/hexo-theme-vivia/source/images/tile.png",
+    "blog/node_modules/hexo-theme-vivia/source/images/favicon-light-32.png",
+    "blog/node_modules/hexo-theme-vivia/source/images/favicon-light-192.png",
+    "blog/node_modules/hexo-theme-vivia/source/images/favicon-light-180.png",
+    "blog/node_modules/hexo-theme-vivia/source/images/favicon-light-128.png",
+    "blog/node_modules/hexo-theme-vivia/source/images/favicon-dark-32.png",
+    "blog/node_modules/hexo-theme-vivia/source/images/favicon-dark-192.png",
+    "blog/node_modules/hexo-theme-vivia/source/images/favicon-dark-180.png",
+    "blog/node_modules/hexo-theme-vivia/source/images/favicon-dark-128.png",
+    "blog/node_modules/hexo-theme-vivia/README.zh-CN.md",
+    "blog/node_modules/hexo-theme-vivia/README.md",
+    "blog/node_modules/colorjs.io/README.md",
+    "blog/node_modules/striptags/README.md",
+    "blog/node_modules/punycode.js/README.md",
+    "blog/node_modules/hexo-symbols-count-time/node_modules/htmlparser2/README.md",
+    "blog/node_modules/hexo-symbols-count-time/node_modules/highlight.js/README.md",
+    "blog/node_modules/hexo-symbols-count-time/node_modules/hexo-util/README.md",
+    "blog/node_modules/hexo-symbols-count-time/node_modules/entities/readme.md",
+    "blog/node_modules/hexo-symbols-count-time/node_modules/domhandler/readme.md",
+    "blog/node_modules/hexo-symbols-count-time/README.md",
+    "blog/node_modules/hexo-generator-index/README.md",
+    "未命名.canvas",
+    "RESOURCE/CANVAS/sqlite图解.canvas",
+    "RESOURCE/CANVAS/获取网络资源.canvas",
+    "RESOURCE/CANVAS/更加真实的网络请求.canvas",
+    "RESOURCE/CANVAS/个人程序设计规范.canvas",
+    "RESOURCE/sqlite图解.canvas",
+    "ASSERTS/个人程序设计规范.canvas",
+    "ASSERTS/更加真实的网络请求.canvas"
   ]
 }
