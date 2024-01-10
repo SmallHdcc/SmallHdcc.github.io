@@ -1,0 +1,6 @@
+Delay = 2000
+Command = 'hexo server'
+WatchFiles = ['md','yml']
+IgnoreFolders = ['node_modules', 'vendor', '.git', '.idea', '.vscode', 'log', 'build', 'dist', 'bin', 'public', 'target', 'output']
+ShowEvent = false
+Github = 'https://github.com/KM911/hotpot'

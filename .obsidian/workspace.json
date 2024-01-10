@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "b142a14a1f7902da",
+    "type": "split",
+    "children": [
+      {
+        "id": "172ece686aead949",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "982a07fee7897e7c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/第一次尝试.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a3c11c1328592104",
+    "type": "split",
+    "children": [
+      {
+        "id": "74ae90158a40fbfe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fa8c8ed4a31ca537",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0ff4603234ab0b5e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "dac088d1da3adcc6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cae4e10dc75bf8ef",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d953d89e9d2ff7f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b9f1d2044da83e3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "source/_posts/第一次尝试.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3daec9e22ef868bf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "source/_posts/第一次尝试.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0e3600c815d775e4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "abd19cbc15661eda",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "source/_posts/第一次尝试.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "982a07fee7897e7c",
+  "lastOpenFiles": [
+    "source/avatar/SmallHdcc.png",
+    "source/avatar",
+    "README.md",
+    "SmallHdcc.github.io/README.md",
+    "SmallHdcc.github.io",
+    "hotpot.toml"
+  ]
+}
