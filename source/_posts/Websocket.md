@@ -1,4 +1,6 @@
 ---
+title: "Websocket"
+date: 2024-01-10 12:09:22
 file-created: 2024 01 10
 last-modified: 2024 01 10
 ---
@@ -37,6 +39,88 @@ last-modified: 2024 01 10
 ```
 
 
+### 在我们的springboot项目中
+
+首先导入 
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-websocket</artifactId>
+    <version>3.1.2</version>
+    <scope>compile</scope>
+</dependency>
+```
+
+其次创建 `WebSocketConfig` 文件，记得实现 `WebSocketConfigurer`
+```java
+@Configuration
+@EnableWebSocket
+@Slf4j
+public class WebSocketConfig implements WebSocketConfigurer {
+
+    @Override
+    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+        log.info("websocket config start...");
+        //添加 websocket处理器 并设置跨域 
+        registry.addHandler(new MyWebSocketHandler(), "/websocket").setAllowedOrigins("*");
+    }
+}
+```
+`log.info`后面的是日志信息
+如果配置是上面那样的，那么你的websocket连接的路径应该是
+ws://localhost:port/websocket 
+
+
+### 在前端项目中（Vite）
+
+在`App.vue`文件中
+
+
+这个是服务失效之后的提示函数
+```js
+const notificatServerState = () => {
+  ElNotification({
+    title: '提示',
+    message: '服务器失效',
+    type: 'error',
+  })
+}
+```
+
+创建websocket连接
+```js
+const socket = new WebSocket('ws://localhost:8081/websocket')
+
+onMounted(() => {
+  socket.onopen = () => {
+    console.log('Connected to server');
+  }
+
+  //发送心跳包
+  setInterval(() => {
+    if (socket.readyState == WebSocket.OPEN)
+      socket.send('heartbeat');
+  }, 10000);
+  //接收消息
+  socket.onmessage = (message) => {
+    if (message.data != "heartbeat") {
+      notificatServerState()
+    }
+  }
+
+  socket.onerror = (error) => {
+    notificatServerState();
+  }
+  socket.onclose = () => {
+    console.log('Disconnected from server');
+    notificatServerState();
+  }
+})
+
+onUnmounted(() => {
+  socket.close();
+})
+```
 
 
 

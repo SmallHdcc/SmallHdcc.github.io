@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/hello-world.md",
+                "file": "source/_posts/Websocket.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/hello-world.md",
+                "file": "source/_posts/Websocket.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/hello-world.md"
+                "file": "source/_posts/Websocket.md"
               }
             }
           },
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/hello-world.md",
+                "file": "source/_posts/Websocket.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,9 @@
   },
   "active": "2042b2e718c9ce79",
   "lastOpenFiles": [
+    "source/_posts/美化PowerShell.md",
     "source/_posts/Websocket.md",
+    "source/_posts/hello-world.md",
     "source/_posts/第一次尝试.md",
     "blog/node_modules/domexception/lib/VoidFunction.js",
     "blog/node_modules/domexception/lib/utils.js",
@@ -205,8 +207,6 @@
     "blog/node_modules/hexo-symbols-count-time/node_modules/hexo-util/README.md",
     "blog/node_modules/hexo-symbols-count-time/node_modules/entities/readme.md",
     "blog/node_modules/hexo-symbols-count-time/node_modules/domhandler/readme.md",
-    "blog/node_modules/hexo-symbols-count-time/README.md",
-    "blog/node_modules/hexo-generator-index/README.md",
     "未命名.canvas",
     "RESOURCE/CANVAS/sqlite图解.canvas",
     "RESOURCE/CANVAS/获取网络资源.canvas",
