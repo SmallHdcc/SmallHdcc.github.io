@@ -2,8 +2,23 @@
 title: "Websocket"
 date: 2024-01-10 12:09:22
 file-created: 2024 01 10
-last-modified: 2024 01 10
+last-modified: 2024 01 18
 ---
+
+### 最终的结果是放弃使用websocket
+
+我要做的是检查服务器的通信状态，使用websocket实在是大材小用，主要是我也没用好
+
+websocket 是先发送http请求到达服务器，然后再转化为ws的，所以需要再jwt那里放行，这才是我未登录情况下一直连接失败的原因。
+
+这个功能我是使用响应拦截器来实现的，返回不正常的响应就提示用户吗，用户只看文章的话，服务器失效，是不会受影响的。
+
+如果需要有bug需要维护，在nginx那里也可以配置，当服务器需要完善的时候打开注释并且重启nginx就好了。
+```nginx
+# rewrite ^(.*)$ /error.html break;
+```
+
+
 
 ### 为什么要用Websocket
 
