@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Websocket.md",
+                "file": "source/_posts/docker基础命令.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/Websocket.md",
+                "file": "source/_posts/docker基础命令.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/Websocket.md"
+                "file": "source/_posts/docker基础命令.md"
               }
             }
           },
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/Websocket.md",
+                "file": "source/_posts/docker基础命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 235.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -162,9 +162,14 @@
   "active": "2042b2e718c9ce79",
   "lastOpenFiles": [
     "source/_posts/美化PowerShell.md",
-    "source/_posts/Websocket.md",
-    "source/_posts/hello-world.md",
     "source/_posts/第一次尝试.md",
+    "source/_posts/hello-world.md",
+    "source/_posts/docker基础命令.md",
+    "source/about/index-1.md",
+    "source/about/index.md",
+    "source/_posts/Websocket.md",
+    "source/img/美化PowerShell-20240111171757955.webp",
+    "source/img",
     "美化PowerShell-20240111171757955.webp",
     "blog/node_modules/domexception/lib/VoidFunction.js",
     "blog/node_modules/domexception/lib/utils.js",
@@ -176,7 +181,6 @@
     "blog/node_modules/domexception/README.md",
     "blog/node_modules/domexception/package.json",
     "blog/node_modules/domexception/LICENSE.txt",
-    "blog/node_modules/domexception/lib",
     "blog/node_modules/filelist/node_modules/minimatch/README.md",
     "blog/node_modules/filelist/README.md",
     "blog/node_modules/esutils/README.md",
@@ -196,7 +200,6 @@
     "blog/node_modules/hexo-theme-vivia/source/images/favicon-light-128.png",
     "blog/node_modules/hexo-theme-vivia/source/images/favicon-dark-32.png",
     "blog/node_modules/hexo-theme-vivia/source/images/favicon-dark-192.png",
-    "blog/node_modules/hexo-theme-vivia/source/images/favicon-dark-180.png",
     "blog/node_modules/hexo-theme-vivia/README.zh-CN.md",
     "blog/node_modules/hexo-theme-vivia/README.md",
     "blog/node_modules/colorjs.io/README.md",
@@ -204,8 +207,6 @@
     "blog/node_modules/punycode.js/README.md",
     "blog/node_modules/hexo-symbols-count-time/node_modules/htmlparser2/README.md",
     "blog/node_modules/hexo-symbols-count-time/node_modules/highlight.js/README.md",
-    "blog/node_modules/hexo-symbols-count-time/node_modules/hexo-util/README.md",
-    "blog/node_modules/hexo-symbols-count-time/node_modules/entities/readme.md",
     "未命名.canvas",
     "RESOURCE/CANVAS/sqlite图解.canvas",
     "RESOURCE/CANVAS/获取网络资源.canvas",
