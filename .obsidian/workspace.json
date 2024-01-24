@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/docker基础命令.md",
+                "file": "source/_posts/java的GC.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/docker基础命令.md",
+                "file": "source/_posts/java的GC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/docker基础命令.md"
+                "file": "source/_posts/java的GC.md"
               }
             }
           },
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/docker基础命令.md",
+                "file": "source/_posts/java的GC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,14 +161,18 @@
   },
   "active": "2042b2e718c9ce79",
   "lastOpenFiles": [
-    "source/_posts/美化PowerShell.md",
-    "source/_posts/第一次尝试.md",
+    "source/img/可达性算法图.webp",
+    "source/img/标记整理.webp",
+    "source/img/美化PowerShell-20240111171757955.webp",
+    "source/_posts/java的GC.md",
+    "source/img/标记清除.webp",
     "source/_posts/hello-world.md",
     "source/_posts/docker基础命令.md",
+    "source/_posts/美化PowerShell.md",
+    "source/_posts/第一次尝试.md",
     "source/about/index-1.md",
     "source/about/index.md",
     "source/_posts/Websocket.md",
-    "source/img/美化PowerShell-20240111171757955.webp",
     "source/img",
     "美化PowerShell-20240111171757955.webp",
     "blog/node_modules/domexception/lib/VoidFunction.js",
@@ -197,16 +201,11 @@
     "blog/node_modules/hexo-theme-vivia/source/images/favicon-light-32.png",
     "blog/node_modules/hexo-theme-vivia/source/images/favicon-light-192.png",
     "blog/node_modules/hexo-theme-vivia/source/images/favicon-light-180.png",
-    "blog/node_modules/hexo-theme-vivia/source/images/favicon-light-128.png",
-    "blog/node_modules/hexo-theme-vivia/source/images/favicon-dark-32.png",
-    "blog/node_modules/hexo-theme-vivia/source/images/favicon-dark-192.png",
     "blog/node_modules/hexo-theme-vivia/README.zh-CN.md",
     "blog/node_modules/hexo-theme-vivia/README.md",
     "blog/node_modules/colorjs.io/README.md",
     "blog/node_modules/striptags/README.md",
     "blog/node_modules/punycode.js/README.md",
-    "blog/node_modules/hexo-symbols-count-time/node_modules/htmlparser2/README.md",
-    "blog/node_modules/hexo-symbols-count-time/node_modules/highlight.js/README.md",
     "未命名.canvas",
     "RESOURCE/CANVAS/sqlite图解.canvas",
     "RESOURCE/CANVAS/获取网络资源.canvas",
