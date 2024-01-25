@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/java的GC.md",
+                "file": "source/_posts/Git无法使用SSH 修复.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/java的GC.md",
+                "file": "source/_posts/Git无法使用SSH 修复.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/java的GC.md"
+                "file": "source/_posts/Git无法使用SSH 修复.md"
               }
             }
           },
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/java的GC.md",
+                "file": "source/_posts/Git无法使用SSH 修复.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,10 +161,11 @@
   },
   "active": "2042b2e718c9ce79",
   "lastOpenFiles": [
+    "source/_posts/java的GC.md",
+    "source/_posts/Git无法使用SSH bug修复.md",
     "source/img/可达性算法图.webp",
     "source/img/标记整理.webp",
     "source/img/美化PowerShell-20240111171757955.webp",
-    "source/_posts/java的GC.md",
     "source/img/标记清除.webp",
     "source/_posts/hello-world.md",
     "source/_posts/docker基础命令.md",
