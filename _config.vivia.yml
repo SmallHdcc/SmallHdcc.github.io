@@ -77,3 +77,9 @@ comment:
 gauges_analytics: false
 google_analytics: false #UA-xxxxxx
 baidu_analytics: false # ddxxxxxxxxxxxxxxxxx In the https://hm.baidu.com/hm.js? Afterwards
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/admonition.css">
+
+    

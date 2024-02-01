@@ -4,6 +4,7 @@ date: 2024-01-25
 file-created: 2024 01 25
 last-modified: 2024 01 25
 ---
+<link rel="stylesheet" href="/css/admonition.css">
 
 偶然发现我不能使用SSH从github上拉取代码
 报错信息
@@ -18,7 +19,7 @@ Please make sure you have the correct access rights and the repository exists.
 
 我们可以执行如下命令
 ```shell
-$ ssh -v git@github
+$ ssh -v git@github.com
 ```
 
 ```txt
@@ -44,3 +45,8 @@ git@github.com: Permission denied (publickey).
 
 最后的不允许访问是因为我没有添加密钥。
 Ubantu 22.04 如果也出现这种情况，可以做相同处理
+
+!!! info 其他情况
+    try another shell.
+
+
