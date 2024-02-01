@@ -64,4 +64,5 @@ deploy:
   repo: https://github.com/SmallHdcc/SmallHdcc.github.io
   branch: master
   message: 
-
+plugins:
+  hexo-admonition
