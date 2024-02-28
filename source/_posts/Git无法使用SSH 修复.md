@@ -31,6 +31,7 @@ debug1: Connecting to github.com [20.205.243.166] port 22.
 我们仔细看一下会发现  `github.com[20.205.243.166]` 后面这个ip地址根本不是github的ip地址，它被篡改了。
 所以我们到hosts文件夹中添加一条github的记录就能够成功访问了，但是还是需要SSH的密钥的。
 生成密钥的方式网上都有，不再赘述。
+
 ```txt
 debug1: Trying private key: C:\\Users\\HD/.ssh/id_rsa
 debug1: Trying private key: C:\\Users\\HD/.ssh/id_dsa
