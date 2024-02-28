@@ -4,6 +4,7 @@ last-modified: 2024 01 20
 title: docker基础使用
 date: 2024-01-09 19:02:18
 ---
+<link rel="stylesheet" href="/css/admonition.css">
 
 我是一个学大数据的，免不了解除hadoop，所以我就去网上找hadoop教程了，最终我选择看菜鸟的教程学习。
 
@@ -63,4 +64,6 @@ $ mysql -h 172.25.164.50 -P 3307 -u root -p hmall
 $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_id
 ```
 可以查看 容器IP地址，但是我没ping通，应该是打开的方式不对哈哈
+
+
 
