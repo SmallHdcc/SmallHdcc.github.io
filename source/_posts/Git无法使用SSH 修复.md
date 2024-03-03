@@ -33,15 +33,15 @@ debug1: Connecting to github.com [20.205.243.166] port 22.
 生成密钥的方式网上都有，不再赘述。
 
 ```txt
-debug1: Trying private key: C:\\Users\\HD/.ssh/id_rsa
-debug1: Trying private key: C:\\Users\\HD/.ssh/id_dsa
-debug1: Trying private key: C:\\Users\\HD/.ssh/id_ecdsa
-debug1: Trying private key: C:\\Users\\HD/.ssh/id_ecdsa_sk
-debug1: Trying private key: C:\\Users\\HD/.ssh/id_ed25519
-debug1: Trying private key: C:\\Users\\HD/.ssh/id_ed25519_sk
-debug1: Trying private key: C:\\Users\\HD/.ssh/id_xmss
-debug1: No more authentication methods to try.
-git@github.com: Permission denied (publickey).
+    debug1: Trying private key: C:\\Users\\HD/.ssh/id_rsa
+    debug1: Trying private key: C:\\Users\\HD/.ssh/id_dsa
+    debug1: Trying private key: C:\\Users\\HD/.ssh/id_ecdsa
+    debug1: Trying private key: C:\\Users\\HD/.ssh/id_ecdsa_sk
+    debug1: Trying private key: C:\\Users\\HD/.ssh/id_ed25519
+    debug1: Trying private key: C:\\Users\\HD/.ssh/id_ed25519_sk
+    debug1: Trying private key: C:\\Users\\HD/.ssh/id_xmss
+    debug1: No more authentication methods to try.
+    git@github.com: Permission denied (publickey).
 ```
 
 最后的不允许访问是因为我没有添加密钥。
