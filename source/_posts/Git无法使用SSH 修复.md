@@ -3,6 +3,10 @@ title: Git无法使用SSH bug修复
 date: 2024-01-25
 file-created: 2024 01 25
 last-modified: 2024 01 25
+tags:
+  - 问题修复
+categories:
+  - 技术
 ---
 <link rel="stylesheet" href="/css/admonition.css">
 

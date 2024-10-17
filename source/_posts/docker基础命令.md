@@ -3,6 +3,10 @@ file-created: 2024 01 20
 last-modified: 2024 01 20
 title: docker基础使用
 date: 2024-01-09 19:02:18
+tags:
+  - 知识
+categories:
+  - 技术
 ---
 <link rel="stylesheet" href="/css/admonition.css">
 

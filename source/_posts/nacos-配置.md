@@ -1,6 +1,10 @@
 ---
 title: nacos 配置
 date: 2024-02-28 18:30:33
+tags:
+  - 工具配置
+categories:
+  - 技术
 ---
 <link rel="stylesheet" href="/css/admonition.css">
 

@@ -3,6 +3,10 @@ file-created: 2024 01 24
 last-modified: 2024 01 24
 date: 2024-01-24
 title: java的GC
+tags:
+  - 知识
+categories:
+  - 技术
 ---
 ## java中的引用类型
 

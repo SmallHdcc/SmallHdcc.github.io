@@ -3,6 +3,10 @@ file-created: 2024 03 07
 last-modified: 2024 03 07
 title: java基础之关键字
 date: 2024-03-07 20:23:25
+tags:
+  - 知识
+categories:
+  - 技术
 ---
 
 ## 关键字

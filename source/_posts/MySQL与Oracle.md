@@ -3,6 +3,10 @@ file-created: 2024 03 06
 last-modified: 2024 03 06
 date: 2024-03-06
 title: MySQL与Oracle
+tags:
+  - 知识
+categories:
+  - 技术
 ---
 ## 数据库功能
 ### 主从复制

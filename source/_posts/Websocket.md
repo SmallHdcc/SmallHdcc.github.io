@@ -1,8 +1,12 @@
 ---
-title: "Websocket"
+title: Websocket
 date: 2024-01-10 12:09:22
 file-created: 2024 01 10
 last-modified: 2024 01 18
+tags:
+  - 知识
+categories:
+  - 技术
 ---
 
 ### 最终的结果是放弃使用websocket
