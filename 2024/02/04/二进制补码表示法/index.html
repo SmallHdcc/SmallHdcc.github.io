@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>二进制补码表示法 | 凌云逸の博客</title><meta name="author" content="SmallHdcc"><meta name="copyright" content="SmallHdcc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="int类型的范围 在32位系统中 -2^31 ~ 2^31   之所以最小值的绝对值比最大值的绝对值多一，根本原因还是最高位是符号位用少一点的bit位来举例子在补码表示中: ( 计算中的二进制是一般的二进制 )最大值：0111 &#x3D; 1000 - 0001 &#x3D; 2**(4-1) - 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二进制补码表示法">
+<meta property="og:url" content="https://smallhdcc.github.io/2024/02/04/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95/index.html">
+<meta property="og:site_name" content="凌云逸の博客">
+<meta property="og:description" content="int类型的范围 在32位系统中 -2^31 ~ 2^31   之所以最小值的绝对值比最大值的绝对值多一，根本原因还是最高位是符号位用少一点的bit位来举例子在补码表示中: ( 计算中的二进制是一般的二进制 )最大值：0111 &#x3D; 1000 - 0001 &#x3D; 2**(4-1) - 1">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://smallhdcc.github.io/img/cover.jpg">
+<meta property="article:published_time" content="2024-02-04T03:08:10.000Z">
+<meta property="article:modified_time" content="2024-11-23T11:27:48.566Z">
+<meta property="article:author" content="SmallHdcc">
+<meta property="article:tag" content="知识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://smallhdcc.github.io/img/cover.jpg"><link rel="shortcut icon" href="/img/%E5%83%8F%E7%B4%A0_%E7%8C%AB.png"><link rel="canonical" href="https://smallhdcc.github.io/2024/02/04/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '二进制补码表示法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-11-23 19:27:48',
+  isShuoshuo: false
+}</script><link rel="stylesheet" href="/styles/admonition.css"><link rel="stylesheet" href="/styles/main.css"><script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">凌云逸の博客</span></a><a class="nav-page-title" href="/"><span class="site-name">二进制补码表示法</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">二进制补码表示法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-02-04T03:08:10.000Z" title="发表于 2024-02-04 11:08:10">2024-02-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-23T11:27:48.566Z" title="更新于 2024-11-23 19:27:48">2024-11-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="admonition info"><p class="admonition-title">int类型的范围
+</p><p>在32位系统中 <code>-2^31 ~ 2^31</code></p>
+</div>
+
+<p>之所以最小值的绝对值比最大值的绝对值多一，根本原因还是最高位是符号位<br>用少一点的bit位来举例子<br>在补码表示中: ( 计算中的二进制是一般的二进制 )<br>最大值：0111 &#x3D; 1000 - 0001 &#x3D; 2**(4-1) - 1 </p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://smallhdcc.github.io">SmallHdcc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://smallhdcc.github.io/2024/02/04/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95/">https://smallhdcc.github.io/2024/02/04/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://smallhdcc.github.io" target="_blank">凌云逸の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a></div><div class="post-share"><div class="social-share" data-image="/img/cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/02/28/nacos-%E9%85%8D%E7%BD%AE/" title="nacos 配置"><img class="cover" src="/img/windows.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">nacos 配置</div></div><div class="info-2"><div class="info-item-1">  关于中间件  就算是还要很多年之后才能去做微服务或者根本不做，我觉得学一下这些中间件也都是有必要的。比如 docker，k8s,当然它们两个应该不能算中间件，它们一个是工具，一个是管理工具的工具，注册中心nacos，zookeeper，dubbo( rpc 框架), ElaskSearch 它们好像不仅仅可以用在服务端开发上，只能说我自己的眼界窄了。 有一说一 docker 确实好用，哈哈哈哈，不过我也就算是基础使用 注册中心 微服务的每一个功能都对应着一个服务，它们之间有些服务会互相依赖，在不同的机器上部署服务，首先应该想到的就是通过网络，响应哪一门语言都提供了并发编程的工具包 同样的，既然使用了微服务，那说明项目很大，可能每一个服务都部署在不止一台服务器上，既然如此，仅依靠java原生的网络编程包 如何做负载均衡，难道要搞一个集合，集合里面的是要依赖服务的ip地址吧？...</div></div></div></a><a class="pagination-related" href="/2024/01/30/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE/" title="虚拟机配置 问题"><img class="cover" src="/img/windows.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">虚拟机配置 问题</div></div><div class="info-2"><div class="info-item-1">  关于虚拟机网络（NAT模式）主机充当虚拟机连接外网的网关，只负责将虚拟机的请求发送到目的地（ 其实这么说不严谨，只是发送到了下一条 路由器 ），所以虚拟机无法使用主机的代理，虚拟机也不会受到主机的本地 DNS 解析的影响。 不知道代理? 在你的计算机上，当你配置了系统代理后，网络请求的转发是由操作系统的网络堆栈负责的。 当你的应用程序（例如浏览器）发起一个网络请求时，这个请求首先会被发送到操作系统的网络堆栈。如果你配置了系统代理，网络堆栈会将 这个请求重定向到代理服务器，而不是直接发送到目标服务器。然后，代理服务器会代替你的计算机向目标服务器发送请求，并将目标服务器 的响应转发回你的计算机。 代理的工作模式是将请求转发到代理服务器，网关看见的就是我们请求代理服务器。   闯祸虚拟机是 Ubantu22.04.3一套操作将虚拟机干进救援模式，根据晚上的教程一步一步来，最后还是报错，说我试图在分区之外操作。 12grub rescue&gt; insmod normalgrub rescue&gt;...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2024/03/06/MySQL%E4%B8%8EOracle/" title="MySQL与Oracle"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-06</div><div class="info-item-2">MySQL与Oracle</div></div><div class="info-2"><div class="info-item-1">数据库功能主从复制今天刚知道的新词我们可以部署多台mysql，其中一台作为主服务器，剩下的作为从服务器复制的过程是异步的，从服务器不需要一直连接到主服务器 复制原理二进制日志当主服务器中的数据发生了更改的时候，会将操作和时间记录到一个二进制文件中。这个二进制文件包含了主服务器进行操作的SQL语句以及服务器ID以及时间戳 I&#x2F;O线程从服务器 会创建一个I&#x2F;O进程，这个进行连接到主服务器的 log dump 进程I&#x2F;O进程从...</div></div></div></a><a class="pagination-related" href="/2024/01/09/docker%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" title="docker基础使用"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-09</div><div class="info-item-2">docker基础使用</div></div><div class="info-2"><div class="info-item-1">  我是一个学大数据的，免不了解除hadoop，所以我就去网上找hadoop教程了，最终我选择看菜鸟的教程学习。 在大三上我安装了docker，却不知道怎么用，正好借这次在WSL中使通过docker使用hadoop的经历来学习一下docker的基础操作  突然感觉没必要写全部的，写一点我可能会用到的常用的 首先就是拉镜像了,我是在wsl中操作的，相当于在Linux中操作 1$ docker pull 镜像名 其实我感觉这一步可以省略，因为假如你创造容器时指定的镜像不存在本地时，docker会自动拉。 12345678910# 列出本机运行的容器 -a可以列出停止和运行起来的$ docker ps # 新建容器并且启动$ docker run [镜像名/镜像ID]# 启动已终止容器$ docker start [容器ID]$ docker stop [容器ID]$ docker kill [容器ID]$ docker rm [容器ID]$ docker restart [容器ID]  123# 在名为 [容器ID] 的容器中启动一个 bash shell# 但是 -i表示...</div></div></div></a><a class="pagination-related" href="/2024/01/10/Websocket/" title="Websocket"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-10</div><div class="info-item-2">Websocket</div></div><div class="info-2"><div class="info-item-1">最终的结果是放弃使用websocket我要做的是检查服务器的通信状态，使用websocket实在是大材小用，主要是我也没用好 websocket 是先发送http请求到达服务器，然后再转化为ws的，所以需要再jwt那里放行，这才是我未登录情况下一直连接失败的原因。 这个功能我是使用响应拦截器来实现的，返回不正常的响应就提示用户吗，用户只看文章的话，服务器失效，是不会受影响的。 如果需要有bug需要维护，在nginx那里也可以配置，当服务器需要完善的时候打开注释并且重启nginx就好了。 1# rewrite ^(.*)$ /error.html...</div></div></div></a><a class="pagination-related" href="/2024/01/24/java%E7%9A%84GC/" title="java的GC"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-24</div><div class="info-item-2">java的GC</div></div><div class="info-2"><div class="info-item-1">java中的引用类型强引用: 发生gc的时候不会被回收 1Object obj = new Object();  软引用: 只有在内存不足时才会被回收 123Object obj = new Object();SoftReference&lt;Object&gt; sf = new SoftReference&lt;Object&gt;(obj)obj = null;  弱引用: 被弱引用关联的对象一定会被回收，只能存活到下一次垃圾回收发生之前 123Object obj = new Object();WeakReference &lt;Object&gt; wf = new WeakReference&lt;Object&gt;(obj);obj = null;  虚引用: 一个对象是否有虚引用的存在，完全不会对其生存时间构成影响，也无法通过虚引用取得一个对象 123Object obj = new Object();PhantomReference &lt;Object&gt; pf = new PhantomReference...</div></div></div></a><a class="pagination-related" href="/2024/03/07/new-java%E5%9F%BA%E7%A1%80/" title="java基础之关键字"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-07</div><div class="info-item-2">java基础之关键字</div></div><div class="info-2"><div class="info-item-1">关键字staticstatic 关键字可以修饰类，方法，变量，代码块· 修饰类的时候，表示这个类是一个静态类，静态类不能够被实例化· 修饰方法的时候，说明这个方法是一个静态方法，静态方法不能够调用非静态成员，静态方法应该通过类名直接调用· 修饰变量的时候，代表这个变量是一个静态变量，静态变量为类所有，但是所有的实例化共享静态变量· 修饰代码块的时候，说明这个代码块只会在类加载时执行一次，且只执行一次 与静态方法不能调用非静态成员类似，static关键字不能够修饰函数中局部变量 final 与 finally虽然看起来很像，但其实一点也不一样final 和 static 有点像，都是修饰类，方法，变量的它修饰的类不能被继承，修饰的方法不能够被重写，修饰的变量不能够被更改，这就跟它的英语意思一模一样 finally块一般是搭配try-catch块一起使用的finally块可以保证块中的内容一定会被执行，即使发生异常也会执行，关闭文件流，打印日志。 </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">SmallHdcc</div><div class="author-info-description">一个菜鸡|想做一个有趣的人和做有趣的事</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客，这里是我的小天地，希望你能喜欢！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/24/%E6%83%B3%E8%A6%81%E4%BA%86%E8%A7%A3/" title="想要了解"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="想要了解"/></a><div class="content"><a class="title" href="/2024/11/24/%E6%83%B3%E8%A6%81%E4%BA%86%E8%A7%A3/" title="想要了解">想要了解</a><time datetime="2024-11-23T16:00:00.000Z" title="发表于 2024-11-24 00:00:00">2024-11-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/24/%E9%87%8C%E7%A8%8B%E7%A2%91/" title="里程碑"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="里程碑"/></a><div class="content"><a class="title" href="/2024/11/24/%E9%87%8C%E7%A8%8B%E7%A2%91/" title="里程碑">里程碑</a><time datetime="2024-11-23T16:00:00.000Z" title="发表于 2024-11-24 00:00:00">2024-11-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/23/%E7%AE%97%E6%B3%95%E5%8E%86%E7%A8%8B%E6%80%BB%E7%BB%93/" title="算法历程总结"><img src="/img/%E7%AE%97%E6%B3%95.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="算法历程总结"/></a><div class="content"><a class="title" href="/2024/11/23/%E7%AE%97%E6%B3%95%E5%8E%86%E7%A8%8B%E6%80%BB%E7%BB%93/" title="算法历程总结">算法历程总结</a><time datetime="2024-11-22T16:00:00.000Z" title="发表于 2024-11-23 00:00:00">2024-11-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/09/%E5%AE%9E%E4%B9%A0/" title="实习"><img src="/img/work.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实习"/></a><div class="content"><a class="title" href="/2024/04/09/%E5%AE%9E%E4%B9%A0/" title="实习">实习</a><time datetime="2024-04-09T08:02:46.000Z" title="发表于 2024-04-09 16:02:46">2024-04-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/07/new-java%E5%9F%BA%E7%A1%80/" title="java基础之关键字"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java基础之关键字"/></a><div class="content"><a class="title" href="/2024/03/07/new-java%E5%9F%BA%E7%A1%80/" title="java基础之关键字">java基础之关键字</a><time datetime="2024-03-07T12:23:25.000Z" title="发表于 2024-03-07 20:23:25">2024-03-07</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/footer.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2024 By SmallHdcc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script src="/styles/fish.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
