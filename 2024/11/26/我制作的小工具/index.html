@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>凌云逸の博客 | 凌云逸の博客</title><meta name="author" content="SmallHdcc"><meta name="copyright" content="SmallHdcc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言由于我主学 Java，所以我做 Web应用 的次数很多，但我觉得一直写Web应用，好像跟我想的不一样。 关于应用 不管是电脑桌面的应用，手机上的APP，还是浏览器网页，都是需要和服务端进行通信，从而获取数据的(需要联网的应用)。我之所以会觉得跟想象的不一样，主要是因为桌面应用的制作对我来说是盲区，我不知道它的制作流程，当然这部分应该不属于后端开发应该关注的事情，但我确实很想了解。   第一个桌">
+<meta property="og:type" content="article">
+<meta property="og:title" content="凌云逸の博客">
+<meta property="og:url" content="https://smallhdcc.github.io/2024/11/26/%E6%88%91%E5%88%B6%E4%BD%9C%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="凌云逸の博客">
+<meta property="og:description" content="前言由于我主学 Java，所以我做 Web应用 的次数很多，但我觉得一直写Web应用，好像跟我想的不一样。 关于应用 不管是电脑桌面的应用，手机上的APP，还是浏览器网页，都是需要和服务端进行通信，从而获取数据的(需要联网的应用)。我之所以会觉得跟想象的不一样，主要是因为桌面应用的制作对我来说是盲区，我不知道它的制作流程，当然这部分应该不属于后端开发应该关注的事情，但我确实很想了解。   第一个桌">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://smallhdcc.github.io/img/cover.jpg">
+<meta property="article:published_time" content="2024-11-26T13:55:42.200Z">
+<meta property="article:modified_time" content="2024-11-26T14:14:31.997Z">
+<meta property="article:author" content="SmallHdcc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://smallhdcc.github.io/img/cover.jpg"><link rel="shortcut icon" href="/img/%E5%83%8F%E7%B4%A0_%E7%8C%AB.png"><link rel="canonical" href="https://smallhdcc.github.io/2024/11/26/%E6%88%91%E5%88%B6%E4%BD%9C%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '凌云逸の博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-26 22:14:31',
+  isShuoshuo: false
+}</script><link rel="stylesheet" href="/styles/admonition.css"><link rel="stylesheet" href="/styles/main.css"><script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">凌云逸の博客</span></a><a class="nav-page-title" href="/"><span class="site-name">凌云逸の博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">无标题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-26T13:55:42.200Z" title="发表于 2024-11-26 21:55:42">2024-11-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-26T14:14:31.997Z" title="更新于 2024-11-26 22:14:31">2024-11-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于我主学 Java，所以我做 Web应用 的次数很多，但我觉得一直写Web应用，好像跟我想的不一样。</p>
+<div class="admonition info"><p class="admonition-title">关于应用
+</p><p>不管是电脑桌面的应用，手机上的APP，还是浏览器网页，都是需要和服务端进行通信，从而获取数据的(需要联网的应用)。我之所以会觉得跟想象的不一样，主要是因为桌面应用的制作对我来说是盲区，我不知道它的制作流程，当然这部分应该不属于后端开发应该关注的事情，但我确实很想了解。</p>
+</div>
+
+<h3 id="第一个桌面应用-timeChecker"><a href="#第一个桌面应用-timeChecker" class="headerlink" title="第一个桌面应用 timeChecker"></a>第一个桌面应用 timeChecker</h3><ul>
+<li>GO 1.23.2 </li>
+<li>npm 1.18</li>
+<li>Vite</li>
+</ul>
+<p>每天都只有24h，虽然我开电脑的时间很长，但不是每一刻都在做同一间事情，所以我就想可视化我的电脑使用情况，加上我也确实想做一款桌面应用和丰富简历，所以我即刻着手。</p>
+<p>每当我想做一件事情的时候，我总喜欢提前规划，然后遇到不理解的点的时候就开始想，然后找方法，结果往往是找不到，那是肯定的了，因为我都没有遇到具体的问题，能找到才奇怪吧。    </p>
+<div class="admonition info"><p class="admonition-title">The Evolution of Software Development
+</p><p>Make it work
+Make it right
+Make it fast
+过早的优化是万恶之源</p>
+</div>
+
+<p>在一开始就做到最好是不可能的，如果刚开始就想做完美，结果只能是 浪费时间，这也是我在本次软件制作的过程中所了解到的。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://smallhdcc.github.io">SmallHdcc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://smallhdcc.github.io/2024/11/26/%E6%88%91%E5%88%B6%E4%BD%9C%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/">https://smallhdcc.github.io/2024/11/26/%E6%88%91%E5%88%B6%E4%BD%9C%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://smallhdcc.github.io" target="_blank">凌云逸の博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2024/11/24/%E6%83%B3%E8%A6%81%E4%BA%86%E8%A7%A3/" title="想要了解"><img class="cover" src="/img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">想要了解</div></div><div class="info-2"><div class="info-item-1">   桌面应用是怎么制作的？  窗口监控 最近我在制作窗口监控的程序，现在已经使用Go语言完成了对基本逻辑的编写，只要在后台运行程序，就可以窗口和应用的使用数据保存，数据存储于sqlite数据库中 接下来，我想要使用Go语言的GUI框架可视化，不想使用之前一直使用的浏览器了，想尝试新东西。    可以最小化到托盘的程序如何制作？ 昨天(2024.11.25)的我或许无法回答这个问题，但是今天已经可以，尽管只是皮毛。 我使用的工具是Electron(网上说它有占用体积大等劣势，但这不是我刚开始开发桌面应用应该考虑的)，想在关闭程序的时候最小化到托盘，只需要1234567891011121314151617181920212223242526272829303132const &#123; Tray &#125;  = require(&#x27;electron)let tray/* 托盘操作项目 */const tray_operation = () =&gt; &#123;    // 创建托盘图标    tray = new...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">SmallHdcc</div><div class="author-info-description">一个菜鸡|想做一个有趣的人和做有趣的事</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客，这里是我的小天地，希望你能喜欢！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8-timeChecker"><span class="toc-number">2.</span> <span class="toc-text">第一个桌面应用 timeChecker</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/11/26/%E6%88%91%E5%88%B6%E4%BD%9C%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/" title="无标题"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无标题"/></a><div class="content"><a class="title" href="/2024/11/26/%E6%88%91%E5%88%B6%E4%BD%9C%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/" title="无标题">无标题</a><time datetime="2024-11-26T13:55:42.200Z" title="发表于 2024-11-26 21:55:42">2024-11-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/24/%E6%83%B3%E8%A6%81%E4%BA%86%E8%A7%A3/" title="想要了解"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="想要了解"/></a><div class="content"><a class="title" href="/2024/11/24/%E6%83%B3%E8%A6%81%E4%BA%86%E8%A7%A3/" title="想要了解">想要了解</a><time datetime="2024-11-23T16:00:00.000Z" title="发表于 2024-11-24 00:00:00">2024-11-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/24/%E9%87%8C%E7%A8%8B%E7%A2%91/" title="里程碑"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="里程碑"/></a><div class="content"><a class="title" href="/2024/11/24/%E9%87%8C%E7%A8%8B%E7%A2%91/" title="里程碑">里程碑</a><time datetime="2024-11-23T16:00:00.000Z" title="发表于 2024-11-24 00:00:00">2024-11-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/23/%E7%AE%97%E6%B3%95%E5%8E%86%E7%A8%8B%E6%80%BB%E7%BB%93/" title="算法历程总结"><img src="/img/%E7%AE%97%E6%B3%95.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="算法历程总结"/></a><div class="content"><a class="title" href="/2024/11/23/%E7%AE%97%E6%B3%95%E5%8E%86%E7%A8%8B%E6%80%BB%E7%BB%93/" title="算法历程总结">算法历程总结</a><time datetime="2024-11-22T16:00:00.000Z" title="发表于 2024-11-23 00:00:00">2024-11-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/09/%E5%AE%9E%E4%B9%A0/" title="实习"><img src="/img/work.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实习"/></a><div class="content"><a class="title" href="/2024/04/09/%E5%AE%9E%E4%B9%A0/" title="实习">实习</a><time datetime="2024-04-09T08:02:46.000Z" title="发表于 2024-04-09 16:02:46">2024-04-09</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/footer.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2024 By SmallHdcc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script src="/styles/fish.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
